@@ -19,8 +19,9 @@ interface HeroInfoProps {
 const HeroCardContainer = styled.div`
   width: 15em;
   background: lightgray;
-  margin: 0 1em;
+  margin: 0 1em 1em;
   border-radius: 15px;
+  box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.2);
 `
 const HeroImage = styled.img`
   width: 100%;
@@ -29,6 +30,13 @@ const HeroImage = styled.img`
 
 const HeroTextContainer = styled.div`
   padding: 10px;
+`
+
+const HeroStatsContainer = styled.div<{ extended: boolean }>`
+  ${props => props.extended ? "height: 150px" : "height: 10px"};
+  max-height: 500px
+  transition: -webkit-transform ease 500ms;
+  transition: max-height ease 500ms;
 `
 
 const HeroName = styled.p`
@@ -53,10 +61,16 @@ const HeroInfo: React.FC<HeroInfoProps> = ({ name, description }) => {
 }
 
 export const HeroCard: React.FC<IHeroCardProps> = ({ imgUrl, name, description }) => {
+
+  const [extended, setExtended] = React.useState(false)
+
   return (
     <HeroCardContainer>
       <HeroImage src={imgUrl} />
       <HeroInfo name={name} description={description} />
+      <HeroStatsContainer extended={extended}>Stats
+        <button onClick={() => setExtended(!extended)}>Extend</button>
+      </HeroStatsContainer>
     </HeroCardContainer>
   )
 }
