@@ -4,6 +4,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 interface IHeroCardProps {
+  id: string
   name: string
   description: string
   imgUrl: string
@@ -16,12 +17,30 @@ interface HeroInfoProps {
   // extend this
 }
 
-const HeroCardContainer = styled.div`
-  width: 15em;
-  background: lightgray;
-  margin: 0 1em 1em;
+const HeroCardSection = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 30em;
+  margin: 0 0em 3rem;
+  background: #ECECEC;
+
   border-radius: 15px;
-  box-shadow: 0px 3px 20px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: -1rem 3px 20px 2px rgba(0, 0, 0, 0.2);
+  transition: .2s;
+
+  &:hover {
+    transform: translateY(-1rem);
+    transform: scale(1.1);
+  }
+
+  &:hover~& {
+    transform: translateX(160px);
+  }
+
+  &:not(:first-child) {
+    margin-left: -150px;
+  }
 `
 const HeroImage = styled.img`
   width: 100%;
@@ -29,14 +48,7 @@ const HeroImage = styled.img`
 `
 
 const HeroTextContainer = styled.div`
-  padding: 10px;
-`
-
-const HeroStatsContainer = styled.div<{ extended: boolean }>`
-  ${props => props.extended ? "height: 150px" : "height: 10px"};
-  max-height: 500px
-  transition: -webkit-transform ease 500ms;
-  transition: max-height ease 500ms;
+  padding: 15px 25px 15px 20px;
 `
 
 const HeroName = styled.p`
@@ -60,17 +72,12 @@ const HeroInfo: React.FC<HeroInfoProps> = ({ name, description }) => {
   )
 }
 
-export const HeroCard: React.FC<IHeroCardProps> = ({ imgUrl, name, description }) => {
-
-  const [extended, setExtended] = React.useState(false)
+export const HeroCard: React.FC<IHeroCardProps> = ({ imgUrl, name, description, id }) => {
 
   return (
-    <HeroCardContainer>
+    <HeroCardSection>
       <HeroImage src={imgUrl} />
       <HeroInfo name={name} description={description} />
-      <HeroStatsContainer extended={extended}>Stats
-        <button onClick={() => setExtended(!extended)}>Extend</button>
-      </HeroStatsContainer>
-    </HeroCardContainer>
+    </HeroCardSection>
   )
 }

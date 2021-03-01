@@ -36,10 +36,11 @@ const HEROES_QUERY = gql`
 	}
 `;
 
-interface IHeroIndexProps {}
+interface IHeroIndexProps { }
 
 const HeroCardContainer = styled.div`
 	display: flex;
+	overflow: hidden;
 	padding: 50px;
 	align-self: center;
 	max-width: 1150px;
