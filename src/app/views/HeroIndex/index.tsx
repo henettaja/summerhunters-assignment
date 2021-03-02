@@ -40,9 +40,9 @@ interface IHeroIndexProps { }
 
 const HeroCardContainer = styled.div`
 	display: flex;
-	overflow: hidden;
 	padding: 50px;
 	align-self: center;
+	min-height: 42em;
 	max-width: 1150px;
 	@media (min-width: 1400px) {
 		margin-left: auto;
