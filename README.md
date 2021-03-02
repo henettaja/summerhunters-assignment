@@ -11,8 +11,8 @@ I made the cards with Styled Components to stay consistent with the rest of the 
 
 ## Images
 
-![herocards1](https://user-images.githubusercontent.com/1544075/109653912-3e7c1080-7b6a-11eb-83f9-78ce6caac978.png)
-![herocards2](https://user-images.githubusercontent.com/1544075/109653925-420f9780-7b6a-11eb-9e5c-9796efd8112b.png)
+![herocards1](src/app/views/HeroIndex/index.tsx)
+![herocards2](src/app/components/HeroCard/index.tsx)
 
 # Original readme.md
 
