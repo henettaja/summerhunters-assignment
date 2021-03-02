@@ -1,3 +1,15 @@
+# My implementation
+
+I created an animated stacked card UI for the HeroCard component, where a card pops out with more data on hover. The cards show the Hero's image, name and description + attributes when hovered over with a mouse or tapped on touch input.
+
+I made the cards with Styled Components to stay consistent with the rest of the frontend.
+
+## Images
+
+![herocards1](https://user-images.githubusercontent.com/1544075/109653912-3e7c1080-7b6a-11eb-83f9-78ce6caac978.png)
+![herocards2](https://user-images.githubusercontent.com/1544075/109653925-420f9780-7b6a-11eb-9e5c-9796efd8112b.png)
+
+
 # Home assignment
 
 For this assignment we have created a GraphQL API and a simple React application that queries infromation from that API. It is your job to finalize this application, either from frontend or backend side. More information of these tracks down below in Tracks section.
