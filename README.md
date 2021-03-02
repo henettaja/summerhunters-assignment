@@ -4,6 +4,11 @@ I created an animated stacked card UI for the HeroCard component, where a card p
 
 I made the cards with Styled Components to stay consistent with the rest of the frontend.
 
+## My contributions
+[Link to HeroCard](https://github.com/henettaja/summerhunters-assignment/blob/main/src/app/components/HeroCard/index.tsx)
+
+[Link to HeroIndex](https://github.com/henettaja/summerhunters-assignment/blob/main/src/app/views/HeroIndex/index.tsx)
+
 ## Images
 
 ![herocards1](https://user-images.githubusercontent.com/1544075/109653912-3e7c1080-7b6a-11eb-83f9-78ce6caac978.png)
